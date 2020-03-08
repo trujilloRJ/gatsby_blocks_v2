@@ -1,0 +1,55 @@
+@import "../config";
+
+.slider {
+  display: flex;
+  justify-content: space-around;
+  &__slide {
+    img {
+      width: 100%;
+      transition: opacity 500ms ease-out;
+    }
+  }
+  &__container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    .btn {
+      background: transparent;
+      border: none;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.left {
+        top: 45%;
+        left: 3%;
+      }
+      &.right {
+        top: 45%;
+        right: 3%;
+      }
+    }
+  }
+  &__indicators {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__ind {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    margin: 0 0.3rem;
+    outline: none;
+    box-shadow: 2px 2px 4px rgba(#000, 0.4);
+  }
+}

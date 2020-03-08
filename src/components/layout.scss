@@ -1,0 +1,52 @@
+@import "config";
+
+// global styles
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $ff-body;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  &.g3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &.g2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.light-primary {
+  background-color: $light-color;
+}
+.dark-primary {
+  background-color: $dark-color;
+}
+
+.p0 {
+  margin: 100px;
+}
+
+@media (max-width: $mob-width) {
+  .grid {
+    &.g3 {
+      grid-template-columns: 1fr;
+    }
+    &.g2 {
+      grid-template-columns: 1fr;
+    }
+  }
+}

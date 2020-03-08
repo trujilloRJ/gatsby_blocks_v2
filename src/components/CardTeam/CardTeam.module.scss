@@ -1,0 +1,37 @@
+@import "../config";
+
+.card {
+  padding: 50px 0 0 50px;
+  padding-bottom: 1rem;
+  &__face {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top: -30px;
+    left: -30px;
+  }
+  &__main {
+    position: relative;
+    background: #fff;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    box-shadow: 1px 0px 5px rgba(#000, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 200px;
+  }
+  &__name {
+    padding: 0.5rem 0;
+    font-size: $fs-h2;
+    font-family: $ff-name;
+    color: rgba(#000, 0.7);
+  }
+  &__desc {
+    padding: 1rem 0;
+    text-align: center;
+  }
+}

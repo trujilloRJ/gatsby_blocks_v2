@@ -1,0 +1,22 @@
+@import "../config";
+
+.section {
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: $max-width;
+    overflow-x: hidden;
+  }
+  &__heading {
+    font-size: $fs-h2;
+    color: $primary-color;
+    padding: 1.5rem 0 1.5rem 0;
+  }
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: $mob-width) {
+  .section__heading {
+    text-align: center;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../config";
+
+.card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: 1px 0px 5px rgba(#000, 0.3);
+  &__brand {
+    min-width: 200px;
+  }
+  &__text {
+    text-align: center;
+  }
+  &__btn_list {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    div {
+      margin: 0 1rem;
+    }
+    a {
+      color: $primary-color;
+    }
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary-color;
+    border-radius: 50%;
+    padding: 0.1rem;
+    box-shadow: 1px 0px 5px rgba(#000, 0.2);
+    transition: all 200ms ease-out;
+    &:hover {
+      background: $primary-color;
+      z-index: 33;
+      a {
+        color: #fff;
+        z-index: 34;
+      }
+    }
+  }
+}

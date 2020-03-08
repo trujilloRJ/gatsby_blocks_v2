@@ -1,0 +1,27 @@
+@import "../config";
+
+.footer {
+  width: 100%;
+  background: $primary-color;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__name {
+    color: #fff;
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    div {
+      padding: 0.5rem;
+    }
+    a {
+      color: #fff;
+      &:hover {
+        color: $focus-color;
+      }
+    }
+  }
+}
