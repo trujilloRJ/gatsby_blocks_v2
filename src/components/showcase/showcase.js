@@ -1,6 +1,6 @@
 import React from "react"
 import scStyles from "./showcase.module.scss"
-import Brand from "../SVG/brand"
+import Brand from "../SVG/Brand"
 
 export default function Showcase() {
   return (

@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import headerStyles from "./header.module.scss"
 
 const Header = ({ siteTitle }) => {
@@ -10,13 +10,15 @@ const Header = ({ siteTitle }) => {
     setMenuClose(!menuClose)
   }
 
-  window.onscroll = () => {
-    if (document.documentElement.scrollTop > 10) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
+  useEffect(() => {
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > 10) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
     }
-  }
+  }, [])
 
   return (
     <>

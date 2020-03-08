@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react"
 import styles from "./ImgSlider.module.scss"
-import LeftArrow from "../SVG/left_arrow"
-import RightArrow from "../SVG/right_arrow"
+import LeftArrow from "../SVG/Left_arrow"
+import RightArrow from "../SVG/Right_arrow"
 
 export default function ImgSlider({ props }) {
   const num_img = props.img_list.length
   const [imgIndex, setImgIndex] = useState(0)
 
-  if (props.type == "translate") {
+  if (props.type === "translate") {
     var img_opacity = new Array(num_img).fill(1)
     var translateTransitionTime = "500ms"
-  } else if (props.type == "fade") {
+  } else if (props.type === "fade") {
     var img_opacity = new Array(num_img).fill(0)
     img_opacity[imgIndex] = 1
     var translateTransitionTime = "0ms"
@@ -26,13 +26,13 @@ export default function ImgSlider({ props }) {
       setImgIndex(imgIndex + 1)
     }
   }
-  function prevImg() {
-    if (imgIndex <= 0) {
-      setImgIndex(num_img - 1)
-    } else {
-      setImgIndex(imgIndex - 1)
-    }
-  }
+  //   function prevImg() {
+  //     if (imgIndex <= 0) {
+  //       setImgIndex(num_img - 1)
+  //     } else {
+  //       setImgIndex(imgIndex - 1)
+  //     }
+  //   }
 
   useEffect(() => {
     const interval = setInterval(nextImg, props.automatedTime)
